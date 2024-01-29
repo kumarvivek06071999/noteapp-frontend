@@ -1,0 +1,1 @@
+export const BASE_URL = "https://cooperative-shift-fly.cyclic.app/"
