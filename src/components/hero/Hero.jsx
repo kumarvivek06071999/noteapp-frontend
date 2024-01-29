@@ -9,12 +9,14 @@ const Hero = () => {
             <div className='w-1/2 flex flex-col '>
                 <div onClick={useEffect(() => {
                     nav("/")
-                }, [])} className='mt-5 cursor-pointer'>
+                }, [])} className='mt-10 cursor-pointer'>
                     <h1 className=' text-6xl font-bold'>NoteApp</h1>
                 </div>
                 <div className='flex mt-20'>
-                    <div className='h-[416px] w-[416px]'>
-                        <p>A note-taking app is a digital tool designed to help users capture and organize their thoughts, ideas, and important information in a convenient and accessible way. These apps serve as modern alternatives to traditional pen-and-paper note-taking methods, offering a range of features to enhance productivity and streamline information management. With the ubiquity of smartphones, tablets, and computers, note-taking apps have become an integral part of both personal and professional life, providing users with a centralized platform to store, retrieve, and share their notes seamlessly.</p>
+                    <div className='h-[416px] w-[512px] text-2xl'>
+                        <p className=' font-sans font-medium text-justify'>A note-taking app is a digital tool designed to help users capture and organize their thoughts, ideas, and important information in a convenient and accessible way. With the ubiquity of smartphones, tablets, and computers, note-taking apps have become an integral part of both personal and professional life, retrieve, and share their notes seamlessly.</p>
+                        <p className=' font-sans font-medium text-justify mt-2'>A note-taking app is a digital tool designed to help users capture and organize their thoughts, ideas, and important information in a convenient and accessible way.</p>
+
                     </div>
                 </div>
             </div>
