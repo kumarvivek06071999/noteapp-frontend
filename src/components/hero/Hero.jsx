@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import { Note } from '../../assets'
 const Hero = () => {
     const nav = useNavigate()
-    const noteImg = "/src/assets/NoteImg.png"
     return (
         <div className='  min-h-screen w-full flex mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 '>
 
@@ -21,7 +20,7 @@ const Hero = () => {
             </div>
             <div className=' w-1/2 flex items-center justify-center '>
                 <div className='h-[416px] w-[416px]'>
-                    <img className='' src={noteImg} alt="" />
+                    <img className='' src={Note} alt="" />
                 </div>
             </div>
 
