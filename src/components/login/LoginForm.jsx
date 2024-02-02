@@ -28,6 +28,7 @@ export const LoginForm = () => {
       data: data
     })
     let { token } = res.data
+    localStorage.setItem("token", token)
 
 
     dispatch(setToken(token))

@@ -12,7 +12,8 @@ const initialState = {
 export const fetchData = createAsyncThunk('note/fetchData', async () => {
     try {
         console.log("token not found")
-        const { token } = store.getState().user
+        // const { token } = store.getState().user
+        const token = localStorage.getItem("token")
         console.log(token)
         const res = await axios({
             method: 'get',

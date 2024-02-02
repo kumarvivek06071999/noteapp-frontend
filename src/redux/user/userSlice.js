@@ -57,9 +57,11 @@ export const userSlice = createSlice({
         },
         setAuth: (state, action) => {
             state.auth = action.payload;
+            localStorage.setItem("auth", action.payload)
         },
         logOut: (state, action) => {
             state = initialState
+            localStorage.removeItem("auth")
         },
         setMainData: (state, action) => {
             state.data = action.payload

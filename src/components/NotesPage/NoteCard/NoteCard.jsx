@@ -17,7 +17,9 @@ const NoteCard = ({ title, body, _id }) => {
   const [open, setOpen] = useState(false)
   const [notesTitle, setNotesTitle] = useState("")
   const [notesBody, setNotesBody] = useState("")
-  const { token } = useSelector((state) => state.user)
+  // const { token } = useSelector((state) => state.user)
+  const token = localStorage.getItem("token")
+  console.log(token)
   const dispatch = useDispatch()
   const UpdateNotes = async () => {
     let res = await axios({

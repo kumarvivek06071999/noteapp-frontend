@@ -5,7 +5,8 @@ import { useNavigate } from 'react-router-dom'
 
 const PrivateRoute = ({ children }) => {
 
-    const { auth } = useSelector((state) => state.user)
+    // const { auth } = useSelector((state) => state.user)
+    const auth = localStorage.getItem("auth")
 
     if (auth) {
 
