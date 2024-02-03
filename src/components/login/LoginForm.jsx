@@ -4,13 +4,14 @@ import { useNavigate } from 'react-router-dom'
 import axios from "axios";
 import { setAuth, setToken } from '../../redux/user/userSlice'
 import { BASE_URL } from '../../constant/config';
-
+import { useCookies } from 'react-cookie'
 
 export const LoginForm = () => {
   const [Email, setEmail] = useState("")
   const [Password, setPassword] = useState("")
   const nav = useNavigate()
   const dispatch = useDispatch()
+  const [cookies, setCookie] = useCookies(['authToken']);
 
 
 
@@ -29,6 +30,7 @@ export const LoginForm = () => {
     })
     let { token } = res.data
     localStorage.setItem("token", token)
+    setCookie("authToken", token)
 
 
     dispatch(setToken(token))

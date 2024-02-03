@@ -1,22 +1,32 @@
-
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { store } from '../../store';
 import { BASE_URL } from '../../constant/config';
+import Cookies from 'js-cookie';
 
 const initialState = {
     data: []
 }
 
+
+
 export const fetchData = createAsyncThunk('note/fetchData', async () => {
+
+    const token = Cookies.get('authToken')
+    console.log("authToken:", token)
+
     try {
+
         console.log("token not found")
         // const { token } = store.getState().user
-        const token = localStorage.getItem("token")
+        // const token = localStorage.getItem("token")
+        // const token = Cookies.get('authToken')
+
         console.log(token)
         const res = await axios({
             method: 'get',
+
             url: BASE_URL + "/note/",
             headers: {
                 Authorization: token

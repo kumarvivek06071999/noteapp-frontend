@@ -27,8 +27,6 @@ export const signupUser = createAsyncThunk("signupuser", async (body) => {
 
 export const getData = createAsyncThunk('user/fetchData', async (token) => {
     try {
-
-
         console.log("token", token)
         const res = await axios({
             method: 'get',

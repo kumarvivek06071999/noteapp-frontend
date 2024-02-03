@@ -21,17 +21,7 @@ const NoteCard = ({ title, body, _id }) => {
   // const token = localStorage.getItem("token")
   const dispatch = useDispatch()
 
-  const extractTokenFromHeaders = (headers) => {
-    // Extract the token from the Authorization header (Bearer token)
-    const authHeader = headers && headers.Authorization;
-    const token = authHeader && authHeader.split(' ')[1];
-    console.log(token)
-    return token;
-  };
-  const protectedResource = (e) => {
-    const token = extractTokenFromHeaders(e.headers);
 
-  }
 
   const UpdateNotes = async () => {
     let res = await axios({
